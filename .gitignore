@@ -100,7 +100,7 @@ publish
 .ropeproject/
 .coverage
 htmlcov/
-
+CACHE/
 # build script local files #
 ############################
 build/buildinfo.properties
