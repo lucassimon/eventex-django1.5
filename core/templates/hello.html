@@ -1,4 +1,15 @@
+{% extends 'site_base.html' %}¬
+       
+{% block title %} Home {% endblock title %}¬
+{% block meta_description %} HomePage da pagina do eventex. {% endblock meta_description %}¬
+{% block meta_keywords %} Landing page, inscrições. {% endblock meta_keywords %}¬
+
+
 {% block content %}
-	<h1>Hello {{ app_name }}!</h1>
-    <p> Bem vindo ao Eventex django 1.5 </p>
+    <div class="row">
+        <div class="span12">
+        	<h1>Hello {{ app_name }}!</h1>
+            <p> Bem vindo ao Eventex django 1.5 </p>
+        </div>
+    </div>
 {% endblock %}
