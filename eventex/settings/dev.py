@@ -5,7 +5,10 @@ from .base import *
 DEBUG = True
 
 TEMPLATE_DEBUG = DEBUG
+
+COMPRESS_ENABLED = not DEBUG
 ########## END DEBUG CONFIGURATION
+
 
 ########## EMAIL CONFIGURATION
 EMAIL_HOST = "localhost"
