@@ -1,9 +1,11 @@
 from django.conf import settings
 from django.conf.urls import patterns, include, url
+from yawdadmin import admin_site
 
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
 admin.autodiscover()
+admin_site._registry.update(admin.site._registry)
 
 # Uncomment the next two lines to enable the admin:
 # from django.contrib import admin
@@ -20,7 +22,7 @@ urlpatterns = patterns(
 
     # Uncomment the next line to enable the admin:
     url(r'^$', include('core.urls', namespace="core")),
-    url(r'^admin/', include(admin.site.urls)),
+    url(r'^admin/', include(admin_site.urls)),
 )
 
 if settings.DEBUG:
