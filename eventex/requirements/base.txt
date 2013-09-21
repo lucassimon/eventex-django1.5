@@ -7,3 +7,9 @@ django-extensions
 oauth2client
 httplib2
 google-api-python-client
+flake8
+django_compressor
+dj-database-url
+django-storages
+boto
+
