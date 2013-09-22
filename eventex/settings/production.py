@@ -32,3 +32,9 @@ if not DEBUG:
     AWS_SECRET_ACCESS_KEY = os.environ['AWS_SECRET_ACCESS_KEY']
     STATIC_URL = COMPRESS_URL = S3_URL
 ########## END AMAZON S3 CONFIGURATION
+
+# Hosts/domain names that are valid for this site; required if DEBUG is False
+# See https://docs.djangoproject.com/en/1.5/ref/settings/#allowed-hosts
+ALLOWED_HOSTS = [
+    '.eventex-lucassimon.com.br'
+]
