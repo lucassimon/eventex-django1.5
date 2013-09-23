@@ -14,6 +14,9 @@ DATABASES = {
 }
 ########## END DATABASE CONFIGURATION
 
+INSTALLED_APPS += (
+    'gunicorn',
+)
 
 ##########  AMAZON S3 CONFIGURATION
 
