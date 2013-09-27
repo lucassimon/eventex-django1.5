@@ -1,18 +1,28 @@
-# Eventex com django 1.5 e padrao de estrutura
+# Eventex com django 1.5
++ Construido com django 1.5 / Powered Django 1.5
++ Django compressor
++ Less
++ Amazon S3 to serve static files in production settings
++ South
++ Gunicorn
++ [Yawd-admin] (https://github.com/yawd/yawd-admin)
 
-## Instalação
+## Instalação para desenvolvimento / Install development
 ```
 $ pip install -r eventex/requirements/dev.txt 
-$ python manage.py syncdb --settings=eventex.settings.local
-$ python manage.py runserver --settings=eventex.settings.local
+$ cd yawd-admin
+$ python setup.py install
+$ python manage.py syncdb --settings=eventex.settings.dev
+$ python manage.py migrate --all --settings=eventex.settings.dev
+$ python manage.py runserver --settings=eventex.settings.dev
 ```
 
-## Executar o shell do django
+## Executar o shell do django / Run Django shell
 ```
-$ python manage.py shell --settings=eventex.settings.local
+$ python manage.py shell --settings=eventex.settings.dev
 ```
 
-## Criando novas apps
+## Criando novas apps / Create news apps
 ```
 $ python manage.py startapp --template https://github.com/lucassimon/django-app-template/zipball/master app_name
 ```
