@@ -2,6 +2,7 @@
 # -*- coding:utf-8 -*-
 
 from unipath import Path
+import os
 PROJECT_DIR = Path(__file__).ancestor(3)
 
 # Django settings for eventex project.
@@ -158,6 +159,18 @@ INSTALLED_APPS = (
     'yawdadmin',
     'django.contrib.admin',
 )
+
+
+##########  MAILTRAP CONFIGURATION
+
+EMAIL_HOST = 'mailtrap.io'
+EMAIL_HOST_USER = os.environ['MAILTRAP_USERNAME']
+EMAIL_HOST_PASSWORD = os.environ['MAILTRAP_PASSWORD']
+EMAIL_PORT = '2525'
+EMAIL_USE_TLS = False
+
+##########  END MAILTRAP CONFIGURATION
+
 
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to
