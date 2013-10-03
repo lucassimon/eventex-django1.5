@@ -34,6 +34,10 @@ if not DEBUG:
     AWS_ACCESS_KEY_ID = os.environ['AWS_ACCESS_KEY_ID']
     AWS_SECRET_ACCESS_KEY = os.environ['AWS_SECRET_ACCESS_KEY']
     STATIC_URL = COMPRESS_URL = S3_URL
+    COMPRESS_PRECOMPILERS = (
+        ('text/coffeescript', 'coffee --compile --stdio'),
+        ('text/less', 'lessc {infile} > {outfile}')
+    )
 ########## END AMAZON S3 CONFIGURATION
 
 # Hosts/domain names that are valid for this site; required if DEBUG is False
