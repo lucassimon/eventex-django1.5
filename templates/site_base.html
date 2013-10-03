@@ -31,7 +31,7 @@
             <script src="{% static "js/less-1.4.1.min.js" %}"></script>
         {% else %}
             {% compress css %}
-            <link type="text/less" rel="stylesheet" href="{% static "css/style.less" %}" charset="utf-8">
+            <link type="text/less" rel="stylesheet" href="{{STATIC_URL}}css/style.less" charset="utf-8">
             {% endcompress %}
         {%endif%}
 
