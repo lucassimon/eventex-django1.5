@@ -55,7 +55,7 @@ if not DEBUG:
     COMPRESS_OFFLINE = True
     COMPRESS_ROOT = STATIC_ROOT
     COMPRESS_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
-
+    COMPRESS_CSSTIDY_ARGUMENTS = '--template=highest --sort_properties=false --sort_selectors=false --merge_selectors=1'
     COMPRESS_URL = S3_URL
     COMPRESS_PRECOMPILERS = (
         ('text/coffeescript', 'coffee --compile --stdio'),
