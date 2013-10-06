@@ -12,4 +12,4 @@ django_compressor
 dj-database-url
 django-storages
 boto
-
+django-decouple
