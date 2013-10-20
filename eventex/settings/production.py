@@ -25,6 +25,7 @@ DATABASES = {
 
 INSTALLED_APPS += (
     'gunicorn',
+    'raven.contrib.django.raven_compat',
 )
 
 ##########  AMAZON S3 CONFIGURATION
@@ -63,6 +64,13 @@ if not DEBUG:
     )
 
 ##########  COMPRESS CONFIGURATION
+
+
+##########  RAVEN CONFIGURATION
+RAVEN_CONFIG = {
+    'dsn': config('RAVEN_DSN')
+}
+##########  RAVEN CONFIGURATION
 
 # Hosts/domain names that are valid for this site; required if DEBUG is False
 # See https://docs.djangoproject.com/en/1.5/ref/settings/#allowed-hosts
